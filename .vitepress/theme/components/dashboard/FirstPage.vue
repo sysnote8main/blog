@@ -5,17 +5,9 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
 </script>
 
 <template>
-  <div
-    class="first-page"
-    v-if="globalConfig.homePage.modules.banner.type === 'avatar'"
-  >
-    <img
-      :src="globalConfig.homePage.avatar"
-      class="avatar"
-      @mouseenter="handleMouseEnter"
-      @mousemove="handleMouseMove"
-      @mouseleave="handleMouseLeave"
-    />
+  <div class="first-page" v-if="globalConfig.homePage.modules.banner.type === 'avatar'">
+    <img :src="globalConfig.homePage.avatar" class="avatar" @mouseenter="handleMouseEnter" @mousemove="handleMouseMove"
+      @mouseleave="handleMouseLeave" />
     <div class="self">
       <h1 class="author">{{ globalConfig.author }}</h1>
       <div class="btns">
@@ -23,24 +15,22 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
           <Icon :icon="globalConfig.icon.location" />
           {{ globalConfig.homePage.city }}
         </div>
-        <a
-          :href="`https://github.com/${globalConfig.names.github}`"
-          class="github btn"
-          ><Icon :icon="globalConfig.icon.github" /> GitHub</a
-        >
+        <a :href="`https://github.com/${globalConfig.names.github}`" class="github btn">
+          <Icon :icon="globalConfig.icon.github" /> GitHub
+        </a>
+      </div>
+      <div class="icon-btns">
+        <a :href="`https://modrinth.com/user/${globalConfig.names.modrinth}`"><img height="32" width="32"
+            src="https://cdn.simpleicons.org/modrinth"></a>
+        <a :href="`https://www.curseforge.com/members/${globalConfig.names.curseforge}/projects`"><img height="32"
+            width="32" src="https://cdn.simpleicons.org/curseforge"></a>
       </div>
     </div>
   </div>
-  <div
-    class="image-page"
-    v-else
-    @mouseenter="handleMouseEnter"
-    @mousemove="handleMouseMove"
-    @mouseleave="handleMouseLeave"
-  >
+  <div class="image-page" v-else @mouseenter="handleMouseEnter" @mousemove="handleMouseMove"
+    @mouseleave="handleMouseLeave">
     <img :src="globalConfig.homePage.modules.banner.imgurl" />
   </div>
-  <div class="self">Modrinth: </div>
 </template>
 
 <style scoped>
@@ -81,6 +71,13 @@ div.btns {
   gap: 28px;
 }
 
+div.icon-btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
 .iconify {
   margin-right: 1px;
 }
@@ -100,6 +97,7 @@ div.btns {
   border: 1px solid var(--vp-c-divider);
   background-repeat: no-repeat;
   padding: 12px;
+
   &:hover {
     box-shadow: var(--vp-shadow-brand);
     border-color: var(--vp-c-brand);
@@ -118,11 +116,9 @@ div.btns {
 
 h1.author {
   color: transparent;
-  background-image: linear-gradient(
-    120deg,
-    var(--vp-c-brand-1) 20%,
-    var(--vp-c-brand-sub)
-  );
+  background-image: linear-gradient(120deg,
+      var(--vp-c-brand-1) 20%,
+      var(--vp-c-brand-sub));
   -webkit-background-clip: text;
   background-clip: text;
   font-family: var(--vp-font-family-title);
