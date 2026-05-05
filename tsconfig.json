@@ -1,0 +1,13 @@
+{
+  "extends": "@zinkawaii/tsconfig",
+  "compilerOptions": {
+    "paths": {
+      "#*": ["./*"],
+      "#theme/*": ["./.vitepress/theme/*"]
+    }
+  },
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"]
+  },
+  "include": ["**/.vitepress/**/*.ts", "**/*.md", "types/**/*.d.ts"]
+}
