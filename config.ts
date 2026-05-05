@@ -24,7 +24,7 @@ export const globalConfig = {
   author: "sysnote8", // your name
   favicon:
     "https://wsrv.nl/?url=avatars.githubusercontent.com/u/69232601?s=400&u=0a370792ba6bbb95a04d309171b562bcd7283a0f&v=4&mask=circle", // favicon (suggest: circle mask)
-  url: "https://blog.sysnote8.com", // main url (https://xxxx.xxx)
+  url: "https://sysnote8.com", // main url (https://xxxx.xxx)
   blogBase: {
     type: "github", // github / gitea
     giteaUrl: "https://gitea.com", // if the type is gitea, fill in the gitea url like: https://gitea.com
@@ -153,16 +153,13 @@ export const globalConfig = {
     enable: true,
     type: "giscus",
     giscus: {
-      repo: "silvaire-qwq/Miracle",
-      repoId: "R_kgDOPz1WLw",
-      categoryId: "DIC_kwDOPz1WL84Cvsrq",
+      repo: "sysnote8main/blog",
+      repoId: "R_kgDOSVBFww",
+      categoryId: "DIC_kwDOSVBFw84C8ZJb",
       themes: {
         light: "https://giscus.catppuccin.com/themes/latte.css",
         dark: "https://giscus.catppuccin.com/themes/mocha.css",
       },
-    },
-    twikoo: {
-      env: "https://twikoo.qwq.blue",
     },
   },
 

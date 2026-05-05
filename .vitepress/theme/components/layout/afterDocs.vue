@@ -47,16 +47,12 @@
       >
       </component>
     </div>
-    <div v-if="globalConfig.comments.type == 'twikoo'">
-      <Twikoo />
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { useData } from "vitepress";
 import { globalConfig } from "#config";
-import Twikoo from "./twikoo.vue";
 // 获取当前配色方案
 const { isDark } = useData();
 

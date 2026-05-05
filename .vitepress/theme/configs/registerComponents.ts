@@ -12,7 +12,6 @@ import RecentPosts from "../components/dashboard/RecentPosts.vue";
 import TechStack from "../components/dashboard/TechStack.vue";
 import FriendCard from "../components/friends/card.vue";
 import Comments from "../components/layout/afterDocs.vue";
-import Twikoo from "../components/layout/twikoo.vue";
 import Manager from "../components/manager/manager.vue";
 import Moments from "../components/moments/moments.vue";
 import File from "../components/utils/file.vue";
@@ -38,28 +37,27 @@ const components = {
   // Layout
   Icon,
   Comments,
-  Twikoo,
   File,
 };
 
 type GlobalComponentTypes = typeof components;
 
 declare module "vue" {
-  interface GlobalComponents extends GlobalComponentTypes {}
+  interface GlobalComponents extends GlobalComponentTypes { }
 }
 
 declare global {
   interface Window {
-    twikoo?: {
-      init: (options: {
-        envId: string;
-        el: string;
-        region?: string;
-        path?: string;
-        lang?: string;
-      }) => void;
-      version: string;
-    };
+    // twikoo?: {
+    //   init: (options: {
+    //     envId: string;
+    //     el: string;
+    //     region?: string;
+    //     path?: string;
+    //     lang?: string;
+    //   }) => void;
+    //   version: string;
+    // };
   }
 }
 
