@@ -26,6 +26,10 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
             width="32" src="https://cdn.simpleicons.org/curseforge"></a>
         <a :href="`https://misskey.systems/@${globalConfig.names.misskey_systems}`"><img height="32" width="32"
             src="/icons/misstems-logo.webp"></a>
+        <a :href="`https://keybase.io/${globalConfig.names.keybase}`"><img height="32" width="32"
+            src="https://cdn.simpleicons.org/keybase"></a>
+        <a :href="`https://x.com/${globalConfig.names.x}`"><img height="32" width="32"
+            src="https://cdn.simpleicons.org/x"></a>
       </div>
     </div>
   </div>
