@@ -160,7 +160,7 @@ export const globalConfig = {
     giscus: {
       repo: "sysnote8main/blog",
       repoId: "R_kgDOSVBFww",
-      categoryId: "DIC_kwDOSVBFw84C8ZJb",
+      categoryId: "DIC_kwDOSVBFw84C8ZJa",
       themes: {
         light: "https://giscus.catppuccin.com/themes/latte.css",
         dark: "https://giscus.catppuccin.com/themes/mocha.css",
