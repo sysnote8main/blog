@@ -77,7 +77,7 @@ export const globalConfig = {
   // homepage setting (when globalConfig.modules.banner is a url)
   homePage: {
     avatar:
-      "/icon_sysnote8.webp", // your avatar
+      "/users/sysnote8.webp", // your avatar
     city: "Miyagi, Japan", // your location
     // introduce: (you cannot use it now)
     // "Awa middle schowol stuwudent whowo is leawarning frowont-end develowopment~!", // introduce your self
@@ -124,10 +124,12 @@ export const globalConfig = {
   },
 
   names: {
-    github: "sysnote8main", // your github username
-    modrinth: "sysnote8main",
     curseforge: "sysnote8main",
+    github: "sysnote8main", // your github username
+    keybase: "sysnote8",
     misskey_systems: "sysnote8",
+    modrinth: "sysnote8main",
+    x: "sysnote8main",
   },
 
   // navigation items
