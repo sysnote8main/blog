@@ -25,7 +25,7 @@ const stacks = ref(globalConfig.homePage.stacks);
 // 动态生成完整 URL
 stacks.value = stacks.value.map((stack) => ({
   ...stack,
-  icon: `https://jsd-proxy.ygxz.in/gh/devicons/devicon/icons/${stack.icon}/${stack.icon}-original.svg`,
+  icon: `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${stack.icon}/${stack.icon}-original.svg`,
 }));
 
 // 自动按首字母排序

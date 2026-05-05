@@ -23,7 +23,7 @@ export const globalConfig = {
   description: "Welcome to sysnote8's blog", // description
   author: "sysnote8", // your name
   favicon:
-    "https://wsrv.nl/?url=avatars.githubusercontent.com/u/184231508?s=400&u=0a370792ba6bbb95a04d309171b562bcd7283a0f&v=4&mask=circle", // favicon (suggest: circle mask)
+    "https://wsrv.nl/?url=avatars.githubusercontent.com/u/69232601?s=400&u=0a370792ba6bbb95a04d309171b562bcd7283a0f&v=4&mask=circle", // favicon (suggest: circle mask)
   url: "https://blog.sysnote8.com", // main url (https://xxxx.xxx)
   blogBase: {
     type: "github", // github / gitea
@@ -100,7 +100,6 @@ export const globalConfig = {
 
     // stacks (https://cdn.jsdelivr.us/gh/devicons/devicon/icons/${stack.icon}/${stack.icon}-original.svg)
     stacks: [
-      { name: "Arch Linux", icon: "archlinux" },
       { name: "CSS", icon: "css3" },
       { name: "HTML", icon: "html5" },
       { name: "Linux", icon: "linux" },
