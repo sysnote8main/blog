@@ -77,7 +77,7 @@ export const globalConfig = {
   // homepage setting (when globalConfig.modules.banner is a url)
   homePage: {
     avatar:
-      "/icon_sysnote8.png", // your avatar
+      "/icon_sysnote8.webp", // your avatar
     city: "Miyagi, Japan", // your location
     // introduce: (you cannot use it now)
     // "Awa middle schowol stuwudent whowo is leawarning frowont-end develowopment~!", // introduce your self
@@ -182,7 +182,7 @@ export const globalConfig = {
   },
 
   // netease music list
-  musicList: "17942010185",
+  musicList: "",
 
   // DO NOT EDIT THESE VALUES!!!!!
   friends: friendList,

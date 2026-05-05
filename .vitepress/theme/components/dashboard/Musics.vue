@@ -5,7 +5,7 @@ footer: false
 
 <script setup lang="ts">
 import { ref, onMounted, computed } from "vue";
-import { globalConfig } from "#config";
+// import { globalConfig } from "#config";
 
 const playlist = ref<any[]>([]);
 
@@ -15,16 +15,16 @@ const defaultImg =
 
 // 获取歌单数据
 onMounted(async () => {
-  try {
-    const response = await fetch(
-      `https://api.injahow.cn/meting/?type=playlist&id=${globalConfig.musicList}`,
-    );
-    const data = await response.json();
-    playlist.value = data;
-    console.log(playlist.value);
-  } catch (error) {
-    console.error(error);
-  }
+  // try {
+  //   const response = await fetch(
+  //     `https://api.injahow.cn/meting/?type=playlist&id=${globalConfig.musicList}`,
+  //   );
+  //   const data = await response.json();
+  //   playlist.value = data;
+  //   console.log(playlist.value);
+  // } catch (error) {
+  //   console.error(error);
+  // }
 });
 
 // 随机打乱数组

@@ -47,6 +47,6 @@ It's Miracle!!!!!
 This project is licensed under the MIT License.
 
 ## Credits
-- `src/public/icon_aosankaku.png`: All rights reserved to [Blue Triangle](https://aosankaku.net)
-- `src/public/icon_sysnote8.png`: All rights reserved to [sysnote8](https://sysnote8.com)
+- `src/public/icon_aosankaku.webp`: All rights reserved to [Blue Triangle](https://aosankaku.net)
+- `src/public/icon_sysnote8.webp`: All rights reserved to [sysnote8](https://sysnote8.com)
 

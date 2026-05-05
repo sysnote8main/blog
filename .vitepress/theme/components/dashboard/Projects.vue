@@ -21,7 +21,7 @@ async function fetchGithubData() {
       !repo.archived && repo.name.toLowerCase() !== username.toLowerCase(),
   );
   const projects = await Promise.all(
-    filteredRepos.map(async (repo: any) => {
+    filteredRepos.splice(0, 2).map(async (repo: any) => {
       let lastCommit = "";
       let committer = "";
       try {

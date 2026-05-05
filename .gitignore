@@ -114,3 +114,5 @@ draft.md
 
 # folders created by IDE
 .idea
+
+.direnv/
