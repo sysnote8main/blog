@@ -6,30 +6,31 @@ import { data as iconList } from "#theme/configs/iconList";
 // experimental: i18n
 import { languageFile as zh } from "#theme/lang/zh_CN";
 import { languageFile as en } from "#theme/lang/en_US";
+import { languageFile as jp } from "#theme/lang/ja_JP";
 
-const languageMap: Record<string, any> = { zh, en };
+const languageMap: Record<string, any> = { zh, en, jp };
 
 // LANGUAGES ----------------------------------------------------------------------
 // hey !!! you !!!
 // change it to "zh" if you want to use Chinese
 // website language (zh / en)
-const defaultLanguage = "en";
+const defaultLanguage = "jp";
 const languageFile = languageMap[defaultLanguage] || en; // do not edit it
 
 // CONFIGS ----------------------------------------------------------------------
 export const globalConfig = {
-  title: "Silvaire's Blog", // title
-  description: "Per Aspera Ad Astra", // description
-  author: "Silvaire", // your name
+  title: "sysnote8's blog", // title
+  description: "Welcome to sysnote8's blog", // description
+  author: "sysnote8", // your name
   favicon:
     "https://wsrv.nl/?url=avatars.githubusercontent.com/u/184231508?s=400&u=0a370792ba6bbb95a04d309171b562bcd7283a0f&v=4&mask=circle", // favicon (suggest: circle mask)
-  url: "https://qwq.blue", // main url (https://xxxx.xxx)
+  url: "https://blog.sysnote8.com", // main url (https://xxxx.xxx)
   blogBase: {
     type: "github", // github / gitea
     giteaUrl: "https://gitea.com", // if the type is gitea, fill in the gitea url like: https://gitea.com
-    repo: "silvaire-qwq/Miracle", // the repo of ur blog
+    repo: "sysnote8main/blog", // the repo of ur blog
   },
-  dateCreated: "2024-08-23", // date created (YYYY-MM-DD)
+  dateCreated: "2026-05-26", // date created (YYYY-MM-DD)
 
   // theme setting
   styles: {
@@ -76,8 +77,8 @@ export const globalConfig = {
   // homepage setting (when globalConfig.modules.banner is a url)
   homePage: {
     avatar:
-      "https://wsrv.nl/?url=avatars.githubusercontent.com/u/184231508?s=400&u=0a370792ba6bbb95a04d309171b562bcd7283a0f&v=3", // your avatar
-    city: "Hedong, Tianjin", // your location
+      "/icon_sysnote8.png", // your avatar
+    city: "Miyagi, Japan", // your location
     // introduce: (you cannot use it now)
     // "Awa middle schowol stuwudent whowo is leawarning frowont-end develowopment~!", // introduce your self
 
@@ -123,7 +124,7 @@ export const globalConfig = {
     ],
   },
 
-  github: "silvaire-qwq", // your github username
+  github: "sysnote8main", // your github username
 
   // navigation items
   nav: [

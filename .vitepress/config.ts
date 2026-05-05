@@ -70,14 +70,11 @@ export default defineConfig({
     lastUpdated: { text: globalConfig.lang.lastUpdated },
 
     footer: {
-      message: `© ${new Date().getFullYear()} ${globalConfig.author}${
-        globalConfig.lang.allRightsReserved
-      }<br>
-        ${
-          globalConfig.lang.poweredBy
+      message: `© ${new Date().getFullYear()} ${globalConfig.author}${globalConfig.lang.allRightsReserved
+        }<br>
+        ${globalConfig.lang.poweredBy
         } <a href="https://vitepress.dev/">VitePress</a> & <a href="https://github.com/silvaire-qwq/Miracle">Miracle</a><br>
-        ${globalConfig.title} ${
-          globalConfig.lang.hasExistedFor
+        ${globalConfig.title} ${globalConfig.lang.hasExistedFor
         } ${getRunningTime(globalConfig.dateCreated)} ${globalConfig.lang.days}
 
         `,
