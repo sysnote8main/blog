@@ -24,6 +24,8 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
             src="https://cdn.simpleicons.org/modrinth"></a>
         <a :href="`https://www.curseforge.com/members/${globalConfig.names.curseforge}/projects`"><img height="32"
             width="32" src="https://cdn.simpleicons.org/curseforge"></a>
+        <a :href="`https://misskey.systems/@${globalConfig.names.misskey_systems}`"><img height="32" width="32"
+            src="/icons/misstems-logo.webp"></a>
       </div>
     </div>
   </div>

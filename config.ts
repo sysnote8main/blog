@@ -127,6 +127,7 @@ export const globalConfig = {
     github: "sysnote8main", // your github username
     modrinth: "sysnote8main",
     curseforge: "sysnote8main",
+    misskey_systems: "sysnote8",
   },
 
   // navigation items
