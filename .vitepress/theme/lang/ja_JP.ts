@@ -1,7 +1,7 @@
 export const languageFile = {
   giscusLang: "jp",
   comments: "コメント",
-  dashboard: "だっしゅぼーど",
+  dashboard: "ダッシュボード",
   articles: "記事",
   archives: "アーカイブ",
   moments: "モーメント",
