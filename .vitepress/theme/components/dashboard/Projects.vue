@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 import { globalConfig } from "#config";
 import PostCard from "../article/postCard.vue";
-const username = globalConfig.github;
+const username = globalConfig.names.github;
 const posts = ref<any[]>([]);
 const loading = ref(true);
 const error = ref("");

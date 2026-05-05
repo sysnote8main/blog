@@ -24,7 +24,7 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
           {{ globalConfig.homePage.city }}
         </div>
         <a
-          :href="`https://github.com/${globalConfig.github}`"
+          :href="`https://github.com/${globalConfig.names.github}`"
           class="github btn"
           ><Icon :icon="globalConfig.icon.github" /> GitHub</a
         >
@@ -40,6 +40,7 @@ const { handleMouseMove, handleMouseEnter, handleMouseLeave } = useCardHover();
   >
     <img :src="globalConfig.homePage.modules.banner.imgurl" />
   </div>
+  <div class="self">Modrinth: </div>
 </template>
 
 <style scoped>

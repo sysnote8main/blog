@@ -123,7 +123,9 @@ export const globalConfig = {
     ],
   },
 
-  github: "sysnote8main", // your github username
+  names: {
+    github: "sysnote8main", // your github username
+  },
 
   // navigation items
   nav: [
