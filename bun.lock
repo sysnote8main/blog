@@ -15,7 +15,7 @@
         "@types/node": "^24.12.2",
         "@zinkawaii/tsconfig": "^0.0.2",
         "iconify": "^1.4.0",
-        "prettier": "3.6.2",
+        "prettier": "3.8.3",
         "vitepress": "^1.6.4",
         "vitepress-plugin-rss": "^0.3.4",
         "vitepress-plugin-tabs": "^0.7.3",
@@ -454,7 +454,7 @@
 
     "preact": ["preact@10.29.1", "", {}, "sha512-gQCLc/vWroE8lIpleXtdJhTFDogTdZG9AjMUpVkDf2iTCNwYNWA+u16dL41TqUDJO4gm2IgrcMv3uTpjd4Pwmg=="],
 
-    "prettier": ["prettier@3.6.2", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ=="],
+    "prettier": ["prettier@3.8.3", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw=="],
 
     "property-information": ["property-information@7.1.0", "", {}, "sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ=="],
 
