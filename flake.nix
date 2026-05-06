@@ -6,22 +6,41 @@
     url = "github:numtide/flake-utils";
     inputs.systems.follows = "systems";
   };
+  inputs.treefmt-nix = {
+    url = "github:numtide/treefmt-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   outputs =
-    { nixpkgs, flake-utils, ... }:
+    {
+      nixpkgs,
+      flake-utils,
+      treefmt-nix,
+      ...
+    }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
-        devShells.default = pkgs.mkShell { packages = [
-          pkgs.bashInteractive
-          pkgs.bun
-          pkgs.cavif
-          pkgs.libwebp
-          pkgs.woff2
-        ]; };
+        devShells.default = pkgs.mkShell {
+          packages = [
+            pkgs.bashInteractive
+            pkgs.bun
+            pkgs.cavif
+            pkgs.libwebp
+            pkgs.woff2
+          ];
+        };
+        formatter = treefmt-nix.lib.mkWrapper pkgs {
+          projectRootFile = "flake.nix";
+          programs = {
+            biome.enable = true;
+            jsonfmt.enable = true;
+            nixfmt.enable = true;
+          };
+        };
       }
     );
 }
