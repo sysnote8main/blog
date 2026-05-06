@@ -9,7 +9,7 @@
     "@zinkawaii/tsconfig": "^0.1.0",
     "iconify": "^1.4.0",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-rss": "^0.3.4",
+    "vitepress-plugin-rss": "^0.4.0",
     "vitepress-plugin-tabs": "^0.9.0",
     "vue": "^3.5.33"
   },
