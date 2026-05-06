@@ -9,7 +9,7 @@
         "dayjs": "^1.11.20",
         "exif-parser": "^0.1.12",
         "rss-parser": "^3.13.0",
-        "typed.js": "^2.1.0",
+        "typed.js": "^3.0.0",
       },
       "devDependencies": {
         "@types/node": "^25.0.0",
@@ -579,7 +579,7 @@
 
     "tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
-    "typed.js": ["typed.js@2.1.0", "https://npm.flatt.tech/typed.js/-/typed.js-2.1.0.tgz", {}, "sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ=="],
+    "typed.js": ["typed.js@3.0.0", "", {}, "sha512-X4pjf0E7riZBo6j3NS21/7cJJ20osSOtD1OxlRoKfFU3GsdPuSpWlFcIKWf0k8uoKwBBrPuHGx+fKeU6GzRcKg=="],
 
     "undici-types": ["undici-types@7.19.2", "", {}, "sha512-qYVnV5OEm2AW8cJMCpdV20CDyaN3g0AjDlOGf1OW4iaDEx8MwdtChUp4zu4H0VP3nDRF/8RKWH+IPp9uW0YGZg=="],
 

@@ -19,7 +19,7 @@
     "dayjs": "^1.11.20",
     "exif-parser": "^0.1.12",
     "rss-parser": "^3.13.0",
-    "typed.js": "^2.1.0"
+    "typed.js": "^3.0.0"
   },
   "scripts": {
     "clean": "node .vitepress/theme/scripts/setup.js",
