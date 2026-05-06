@@ -5,7 +5,7 @@
     "#theme/*": "./.vitepress/theme/*.ts"
   },
   "devDependencies": {
-    "@types/node": "^24.12.2",
+    "@types/node": "^25.0.0",
     "@zinkawaii/tsconfig": "^0.1.0",
     "iconify": "^1.4.0",
     "vitepress": "^1.6.4",
