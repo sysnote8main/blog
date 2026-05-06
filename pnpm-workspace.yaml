@@ -1,3 +1,0 @@
-shamefullyHoist: true
-onlyBuiltDependencies:
-  - esbuild

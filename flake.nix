@@ -17,6 +17,7 @@
       {
         devShells.default = pkgs.mkShell { packages = [
           pkgs.bashInteractive
+          pkgs.bun
           pkgs.cavif
           pkgs.libwebp
           pkgs.woff2
