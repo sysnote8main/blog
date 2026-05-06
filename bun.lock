@@ -13,7 +13,7 @@
       },
       "devDependencies": {
         "@types/node": "^24.12.2",
-        "@zinkawaii/tsconfig": "^0.0.2",
+        "@zinkawaii/tsconfig": "^0.1.0",
         "iconify": "^1.4.0",
         "vitepress": "^1.6.4",
         "vitepress-plugin-rss": "^0.3.4",
@@ -251,7 +251,7 @@
 
     "@vueuse/shared": ["@vueuse/shared@12.8.2", "https://npm.flatt.tech/@vueuse/shared/-/shared-12.8.2.tgz", { "dependencies": { "vue": "^3.5.13" } }, "sha512-dznP38YzxZoNloI0qpEfpkms8knDtaoQ6Y/sfS0L7Yki4zh40LFHEhur0odJC6xTHG5dxWVPiUWBXn+wCG2s5w=="],
 
-    "@zinkawaii/tsconfig": ["@zinkawaii/tsconfig@0.0.2", "https://npm.flatt.tech/@zinkawaii/tsconfig/-/tsconfig-0.0.2.tgz", {}, "sha512-SCK0SbJCikxJiMzg9sHjlw99yKMCUxYKzVBrHJmPnIqjRXqN5ieC9lWp9L7havbXbH4NniFL+wnNIvjYiEOhig=="],
+    "@zinkawaii/tsconfig": ["@zinkawaii/tsconfig@0.1.0", "", {}, "sha512-rNzI1IwTzwDTlHJ8jxEP35JB3gwKWaBurGHzLWe9VWPTzJmEyeF+wVAgfKerPJoNvuRo2jcSzHkuR8urGIClzA=="],
 
     "abab": ["abab@2.0.6", "https://npm.flatt.tech/abab/-/abab-2.0.6.tgz", {}, "sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA=="],
 
