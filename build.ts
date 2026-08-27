@@ -32,10 +32,10 @@ import "prismjs/components/prism-markdown.js";
 // ---------- 設定 ----------
 
 const SITE = {
-  title: "My Blog",
-  description: "A super-light static blog",
-  url: "https://example.com",
-  author: "Anonymous",
+  title: "sysnote8's blog",
+  description: "Awesome Box",
+  url: "https://sysnote8.com",
+  author: "sysnote8main",
 };
 
 const CONTENT_DIR = "./content";
