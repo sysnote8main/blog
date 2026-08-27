@@ -1,8 +1,8 @@
 ---
 title: ブログで使用する画像形式について
-published: 2026-05-06
+date: 2026-05-06
 description: webpとavifのどっちが良いんだろうか...
-tags: [WebP, AVIF, Blog]
+tags: WebP, AVIF, Blog
 category: infra
 ---
 

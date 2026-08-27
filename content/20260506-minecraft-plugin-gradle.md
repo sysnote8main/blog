@@ -1,8 +1,8 @@
 ---
 title: マイクラのプラグインに関するGradleのメモ
-published: 2026-05-06
+date: 2026-05-06
 description: ちょこっとメモ
-tags: [Minecraft, Gradle, PaperMC]
+tags: Minecraft, Gradle, PaperMC
 category: minecraft-dev
 ---
 
