@@ -1,4 +1,4 @@
-#!/usr/bin/env -S deno run --allow-read --allow-write
+#!/usr/bin/env -S npx tsx
 
 /**
  * 超軽量 TypeScript 静的ブログジェネレーター
@@ -11,6 +11,8 @@
  * - OS ネイティブダークモード (prefers-color-scheme)
  */
 
+import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import Prism from "prismjs";
@@ -183,19 +185,15 @@ function pageHtml({
 
 async function build() {
   // 1. dist/ をクリーン
-  try {
-    await Deno.remove(DIST_DIR, { recursive: true });
-  } catch (e) {
-    if (!(e instanceof Deno.errors.NotFound)) throw e;
-  }
-  await Deno.mkdir(DIST_DIR, { recursive: true });
-  await Deno.mkdir(TAGS_DIR, { recursive: true });
+  await rm(DIST_DIR, { recursive: true, force: true });
+  await mkdir(DIST_DIR, { recursive: true });
+  await mkdir(TAGS_DIR, { recursive: true });
 
   // 2. 全記事を読み込み
   const posts: Post[] = [];
-  for await (const entry of Deno.readDir(CONTENT_DIR)) {
-    if (!entry.isFile || !entry.name.endsWith(".md")) continue;
-    const raw = await Deno.readTextFile(`${CONTENT_DIR}/${entry.name}`);
+  for (const entry of await readdir(CONTENT_DIR, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".md")) continue;
+    const raw = await readFile(`${CONTENT_DIR}/${entry.name}`, "utf8");
     const { data, body } = parseFrontmatter(raw);
     const slug = entry.name.replace(/\.md$/, "");
     const html = await md.parse(body);
@@ -224,7 +222,7 @@ async function build() {
   <p class="meta"><time datetime="${escapeHtml(p.date)}">${escapeHtml(p.date)}</time>${tagsHtml ? " · " + tagsHtml : ""}</p>
   ${p.html}
 </article>`;
-    await Deno.writeTextFile(
+    await writeFile(
       `${DIST_DIR}/${p.slug}.html`,
       pageHtml({ title: p.title, content }),
     );
@@ -234,7 +232,7 @@ async function build() {
   const listHtml = posts.length
     ? `<ul>${posts.map((p) => `<li><time>${escapeHtml(p.date)}</time> <a href="/${p.slug}.html">${escapeHtml(p.title)}</a></li>`).join("")}</ul>`
     : "<p>No posts yet.</p>";
-  await Deno.writeTextFile(
+  await writeFile(
     `${DIST_DIR}/index.html`,
     pageHtml({
       title: SITE.title,
@@ -259,7 +257,7 @@ async function build() {
         `<li><a href="/tags/${t}.html">#${escapeHtml(t)}</a> (${tagMap.get(t)!.length})</li>`,
     )
     .join("");
-  await Deno.writeTextFile(
+  await writeFile(
     `${TAGS_DIR}/index.html`,
     pageHtml({
       title: "Tags",
@@ -274,7 +272,7 @@ async function build() {
           `<li><time>${escapeHtml(p.date)}</time> <a href="/${p.slug}.html">${escapeHtml(p.title)}</a></li>`,
       )
       .join("");
-    await Deno.writeTextFile(
+    await writeFile(
       `${TAGS_DIR}/${tag}.html`,
       pageHtml({
         title: `#${tag}`,
@@ -284,22 +282,22 @@ async function build() {
   }
 
   // 6. RSS フィード (最新20件)
-  await Deno.writeTextFile(`${DIST_DIR}/feed.xml`, generateRSS(posts));
+  await writeFile(`${DIST_DIR}/feed.xml`, generateRSS(posts));
 
   // 7. style.css を dist/ に書き出し
-  await Deno.writeTextFile(`${DIST_DIR}/style.css`, SITE_CSS);
+  await writeFile(`${DIST_DIR}/style.css`, SITE_CSS);
 
   // 8. prism.css を dist/ にコピー
   let prismCss: string;
   try {
-    const cssPath = new URL(
+    const cssPath = fileURLToPath(
       import.meta.resolve("prismjs/themes/prism-tomorrow.css"),
     );
-    prismCss = await Deno.readTextFile(cssPath);
+    prismCss = await readFile(cssPath, "utf8");
   } catch {
     prismCss = "/* prism theme not found */";
   }
-  await Deno.writeTextFile(`${DIST_DIR}/prism.css`, prismCss);
+  await writeFile(`${DIST_DIR}/prism.css`, prismCss);
 
   console.log(`✓ Built ${posts.length} posts, ${tagMap.size} tags`);
 }
@@ -330,6 +328,6 @@ ${items}
 `;
 }
 
-if (import.meta.main) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   await build();
 }

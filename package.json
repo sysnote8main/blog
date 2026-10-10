@@ -1,0 +1,25 @@
+{
+  "name": "newblog",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "超軽量 TypeScript 静的ブログジェネレーター",
+  "scripts": {
+    "build": "tsx build.ts",
+    "serve": "tsx serve.ts",
+    "dev": "pnpm build && pnpm serve",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "marked": "14.1.4",
+    "marked-highlight": "2.1.4",
+    "prismjs": "1.29.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/prismjs": "^1.26.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

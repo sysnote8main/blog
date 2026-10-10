@@ -18,14 +18,17 @@
 # 記事を書く (content/*.md)
 # フロントマター: title, date, tags (カンマ区切り)
 
+# 依存をインストール
+pnpm install
+
 # ビルド
-deno task build
+pnpm build
 
 # ローカルプレビュー
-deno task serve
+pnpm serve
 
 # ビルド + プレビュー
-deno task dev
+pnpm dev
 ```
 
 ## ディレクトリ構成
@@ -37,7 +40,9 @@ deno task dev
 │   └── typescript-tips.md
 ├── dist/             # ビルド出力 (Web サーバー配信ルート)
 ├── build.ts          # ビルドスクリプト (単一ファイル)
-├── deno.json         # タスク定義
+├── serve.ts          # 開発用静的ファイルサーバー
+├── package.json      # タスク定義・依存 (pnpm)
+├── tsconfig.json     # TypeScript 設定
 └── README.md
 ```
 
