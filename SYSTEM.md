@@ -8,7 +8,7 @@
 - Zero External CDN (CSS はセルフホスティング)
 - OS ネイティブダークモード (`prefers-color-scheme` 連動)
 - Markdown → HTML (ビルド時変換)
-- PrismJS シンタックスハイライト (ビルド時適用)
+- PrismJS シンタックスハイライト (全言語対応・ビルド時適用)
 - タグ別ページ自動生成
 - RSS 2.0 フィード自動出力
 

@@ -16,20 +16,10 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import Prism from "prismjs";
+// Prism の全言語コンポーネントを依存関係ごと読み込む (kotlin など任意の言語に対応)
+import loadLanguages from "prismjs/components/index.js";
 
-// Prism 言語コンポーネント (side-effect import で globalThis.Prism に登録)
-import "prismjs/components/prism-typescript.js";
-import "prismjs/components/prism-javascript.js";
-import "prismjs/components/prism-jsx.js";
-import "prismjs/components/prism-tsx.js";
-import "prismjs/components/prism-css.js";
-import "prismjs/components/prism-bash.js";
-import "prismjs/components/prism-json.js";
-import "prismjs/components/prism-yaml.js";
-import "prismjs/components/prism-python.js";
-import "prismjs/components/prism-rust.js";
-import "prismjs/components/prism-go.js";
-import "prismjs/components/prism-markdown.js";
+loadLanguages();
 
 // ---------- 設定 ----------
 
